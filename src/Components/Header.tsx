@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container, Stack, Box, Link, useTheme } from '@mui/material';
 import { useSelector } from 'react-redux';
 import { fixedAdmin } from '../redux/authSlice';

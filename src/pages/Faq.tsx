@@ -1,4 +1,3 @@
-import React from 'react'
 import { useTheme, Stack, Container, TextField, Button, Typography, Box } from '@mui/material';
 import Accordion from '@mui/material/Accordion';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';

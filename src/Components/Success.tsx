@@ -1,4 +1,3 @@
-import React from 'react'
 import { Box, Typography, Stack, useTheme } from "@mui/material";
 import DoneIcon from '@mui/icons-material/Done';
 
