@@ -1,0 +1,65 @@
+@font-face {
+  font-family: "Niramit";
+  src: local("Niramit"), url("./assets/Niramit-Medium.ttf") format("truetype");
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Niramit-Bold";
+  src: local("Niramit-Bold"), url("./assets/Niramit-Bold.ttf") format("truetype");
+  font-display: swap;
+}
+
+
+body {
+  font-family: "Niramit";
+}
+
+
+.MuiDataGrid-row {
+  --DataGrid-rowBorderColor: #313A4B;
+}
+
+.MuiDataGrid-columnHeaders {
+  --DataGrid-rowBorderColor: #313A4B;
+}
+
+.MuiDataGrid-root {
+  --DataGrid-t-header-background-base: transparent !important;
+}
+
+.custom-textarea {
+  border-radius: 10px;
+  background-color: #242C39;
+  color: #fff;
+  padding: 10px;
+  margin-top: 15px;
+  margin-bottom: 19px;
+  width: 100%;
+  font-family: inherit;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  resize: none;
+  padding: 16px 14px;
+}
+
+.custom-textarea::placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+.custom-textarea:focus {
+  border: none
+}
+
+.css-jm33vj-MuiPaper-root-MuiAccordion-root{
+  border-radius: 30px !important;
+  box-shadow: none !important;
+}
+
+
+.qrcode{
+  width: 100%;
+}
