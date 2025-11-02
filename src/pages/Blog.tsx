@@ -1,8 +1,7 @@
 import * as React from 'react';
-import { Container, Box, Grid ,Button, Typography, useTheme } from '@mui/material';
+import { Container, Box, Grid ,Button, Typography } from '@mui/material';
 export default function Blog() {
 
-    const theme = useTheme()
 
     const allblogs = [
         { id: 1, titel: "Website Development", icone: "/earth.svg" },
