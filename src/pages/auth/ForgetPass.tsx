@@ -58,7 +58,7 @@ export default function ForgetPass() {
     return (
         <Container sx={{ display: 'flex', justifyContent: "center" }}>
             {step === 1 ? (
-                <Box component="form" onSubmit={form.handleSubmit} mt="224px" py="34px" px="38px" sx={{ display: "flex", flexDirection: "column", width: "560px", height: "auto", backgroundColor: theme.palette.secondary.main, borderRadius: "30px" }}>
+                <Box component="form" onSubmit={form.handleSubmit} mb="130px" mt="224px" py="34px" px="38px" sx={{ display: "flex", flexDirection: "column", width: "560px", height: "auto", backgroundColor: theme.palette.secondary.main, borderRadius: "30px" }}>
                     <Typography fontSize="36px" fontWeight="bold" mb={6} variant='h2' textAlign="center" sx={{ background: "linear-gradient(to right, #1D8D94 0%, #91D2A3 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", }}>Forget Password</Typography>
                     <FormLabel>Email :</FormLabel>
                     <TextField name='email' value={form.values.email} onChange={form.handleChange} onBlur={form.handleBlur} type='email' placeholder='Please Enter Your Email' error={form.touched.email && Boolean(form.errors.email)} helperText={form.touched.email && form.errors.email}
@@ -78,7 +78,7 @@ export default function ForgetPass() {
                     <Button type='submit'>confirm</Button>
                 </Box>
             ) : (
-                <Box component="form" onSubmit={form.handleSubmit} mt="137px" py="44px" px="38px" sx={{ display: "flex", flexDirection: "column", width: "560px", height: "auto", backgroundColor: theme.palette.secondary.main, borderRadius: "30px" }}>
+                <Box component="form" onSubmit={form.handleSubmit} mb="70px" mt="137px" py="44px" px="38px" sx={{ display: "flex", flexDirection: "column", width: "560px", height: "auto", backgroundColor: theme.palette.secondary.main, borderRadius: "30px" }}>
                     <Typography fontSize="36px" fontWeight="bold" variant='h2' mb={6} textAlign="center" sx={{ background: "linear-gradient(to right, #1D8D94 0%, #91D2A3 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", }}>Change Password</Typography>
                     <Stack direction="row" justifyContent="space-between" alignItems="center">
                         <FormLabel>New Password :</FormLabel>

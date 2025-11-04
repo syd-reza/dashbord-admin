@@ -58,7 +58,11 @@ const theme = createTheme({
                         opacity: 1,
                     },
                     marginTop: "15px",
-                    marginBottom: "19px"
+                    marginBottom: "19px",
+                    "& .MuiOutlinedInput-root": {
+                        "& fieldset": { border: "none" },
+                        "&:hover fieldset": { border: "none" }
+                    }
                 },
             },
         },

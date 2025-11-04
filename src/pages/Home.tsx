@@ -43,6 +43,7 @@ export default function Home() {
           "& .MuiStepLabel-label.Mui-active": { color: "#40A578", fontWeight:"700"},
           "& .MuiStepIcon-root.Mui-completed": { color: "#40A578" },
           "& .MuiStepLabel-labelContainer": { color: "#596B89" },
+          "& .MuiStepIcon-root": { color: "#596B89" },
           "& .MuiStepLabel-label.Mui-completed": { color: "#40A578" },
           "& .Mui-active .MuiStepConnector-line": {borderColor: "#40A578",},
           "& .Mui-completed .MuiStepConnector-line": {borderColor: "#40A578",},
