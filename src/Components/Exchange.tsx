@@ -27,41 +27,45 @@ export default function Exchange({ onNext }: any) {
 
     function exchangehandler() {
         const type =
-          from.currency === "usdt" && to.currency === "pm"
-            ? ExchangeType.USDT_TO_PM
-            : ExchangeType.PM_TO_USDT;
-      
+            from.currency === "usdt" && to.currency === "pm"
+                ? ExchangeType.USDT_TO_PM
+                : ExchangeType.PM_TO_USDT;
+
         dispatch(setExchangeType(type));
         onNext();
-      }
-      
+    }
+
 
     return (
         <Box sx={{ width: "560px", margin: "0 auto" }}>
-            
+
             <Stack sx={{ backgroundColor: theme.palette.secondary.main, padding: "40px 38px", borderRadius: "30px" }}>
                 <Typography fontSize="16px" fontWeight="700" mb="22px">From :</Typography>
                 <Stack direction="row" sx={{ backgroundColor: "#242C39", borderRadius: "10px" }}>
-                    
+
                     <TextField
                         fullWidth
                         value={from.value}
-                        onChange={(e) => setFrom({...from, value: e.target.value})}
+                        onChange={(e) => setFrom({ ...from, value: e.target.value })}
                         sx={{ borderRight: "1px solid #5B5F5E", m: 0, "& .MuiOutlinedInput-root": { "& fieldset": { border: "none" }, "&:hover fieldset": { border: "none" } } }}
                     />
 
                     <Select
                         value={from.currency}
-                        onChange={(e) => setFrom({...from, currency: e.target.value})}
+                        onChange={(e) => setFrom({ ...from, currency: e.target.value })}
                         sx={{ width: "70%" }}
                     >
                         <MenuItem value="usdt">
-                            <img src="/usdt.svg" width="22" height="22" />
-                            USDT (TRC20)
+                            <Stack direction="row" alignItems="center" gap="10px">
+                                <img src="/usdt.svg" width="22" height="22" />
+                                <Typography>USDT (TRC20)</Typography>
+                            </Stack>
                         </MenuItem>
                         <MenuItem value="pm">
-                            <img src="/pm.svg" width="22" height="22" />
-                            PerfectMoney
+                            <Stack direction="row" alignItems="center" gap="10px">
+                                <img src="/pm.svg" width="22" height="22" />
+                                PerfectMoney
+                            </Stack>
                         </MenuItem>
                     </Select>
                 </Stack>
@@ -77,22 +81,24 @@ export default function Exchange({ onNext }: any) {
             <Stack sx={{ marginTop: "-20px", backgroundColor: theme.palette.secondary.main, padding: "40px 38px", borderRadius: "30px" }}>
                 <Typography fontSize="16px" fontWeight="700" mb="22px">To :</Typography>
                 <Stack direction="row" sx={{ backgroundColor: "#242C39", borderRadius: "10px" }}>
-                    
+
                     <TextField
                         fullWidth
                         value={to.value}
-                        onChange={(e) => setTo({...to, value: e.target.value})}
+                        onChange={(e) => setTo({ ...to, value: e.target.value })}
                         sx={{ borderRight: "1px solid #5B5F5E", m: 0, "& .MuiOutlinedInput-root": { "& fieldset": { border: "none" }, "&:hover fieldset": { border: "none" } } }}
                     />
-                    
+
                     <Select
                         value={to.currency}
-                        onChange={(e) => setTo({...to, currency: e.target.value})}
+                        onChange={(e) => setTo({ ...to, currency: e.target.value })}
                         sx={{ width: "70%" }}
                     >
                         <MenuItem value="pm">
-                            <img src="/pm.svg" width="22" height="22" />
-                            PerfectMoney
+                            <Stack direction="row" alignItems="center" gap="10px">
+                                <img src="/pm.svg" width="22" height="22" />
+                                PerfectMoney
+                            </Stack>
                         </MenuItem>
                         <MenuItem value="usdt">
                             <img src="/usdt.svg" width="22" height="22" />

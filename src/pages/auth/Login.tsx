@@ -23,7 +23,7 @@ export default function Login() {
 
 
     const form = useFormik({
-        initialValues: { email: "", password: "" },
+        initialValues: { email: "reza@gmail.com", password: "12345678" },
         onSubmit: (values) => {
             dispatch(loginAdmin(values));
             form.resetForm();
