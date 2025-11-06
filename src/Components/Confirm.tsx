@@ -18,13 +18,13 @@ export default function Confirm({ onNext }: any) {
 
     }
     const items = [
-        "Any change in exchange rate on the binance exchange gives us the right to recalculate the amount of the application.",
-        "The rate for your application will be fixed after 1 confirmation online.",
-        "Funds are credited after 20 transaction confirmations.",
-        "We conduct AML checks in accordance with the AML policy of the flashobmen service.",
-        "Fill out all fields of the form provided.",
-        "Click the “make an exchange” button.",
-        "Read the terms of exchange. if you accept them, check the approprite boxes9. pay for the application according to the instructions on the website.",
+        "Any Change In Exchange Rate On The Binance Exchange Gives Us The Right To Recalculate The Amount Of The Application.",
+        "The Rate For Your Application Will Be Fixed After 1 Confirmation Online.",
+        "Funds Are Credited After 20 Transaction Confirmations.",
+        "We Conduct AML Checks In Accordance With The AML Policy Of The Flashobmen Service.",
+        "Fill Out All Fields Of The Form Provided.",
+        "Click The “Make An Exchange” Button.",
+        "Read The Terms Of Exchange. If You Accept Them, Check The Approprite Boxes9. Pay For The Application According To The Instructions On The Website.",
     ];
 
     const [agree, setAgree] = useState(false);
@@ -58,7 +58,7 @@ export default function Confirm({ onNext }: any) {
             {!isLogin ? (
                 <Box sx={{ display: "flex", flexDirection: "column", marginTop: "16px", backgroundColor: theme.palette.secondary.main, borderRadius: "30px" }}>
                     <FormLabel>Email :</FormLabel>
-                    <TextField name='email' type='email' placeholder='Please Enter Your Email' sx={{"&:hover fieldset": { border: "none" }}}/>
+                    <TextField name='email' type='email' placeholder='Please Enter Your Email' sx={{ "&:hover fieldset": { border: "none" } }} />
                 </Box>
             ) : (
                 ""
@@ -115,7 +115,7 @@ export default function Confirm({ onNext }: any) {
             </Box>
             <Stack direction="row" justifyContent="center" alignItems="center">
                 <Button disabled={!agree} onClick={exchangehandler} sx={{ width: "560px" }}>
-                    Make Exchange
+                    Confirm
                 </Button>
             </Stack>
         </Box>

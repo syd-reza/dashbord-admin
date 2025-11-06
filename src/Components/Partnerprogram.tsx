@@ -4,7 +4,6 @@ import Snackbar from '@mui/material/Snackbar';
 import type { SnackbarCloseReason } from '@mui/material/Snackbar';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import DiamondOutlinedIcon from '@mui/icons-material/DiamondOutlined';
-import PeopleAltOutlinedIcon from '@mui/icons-material/PeopleAltOutlined';
 import { DataGrid } from '@mui/x-data-grid';
 import type { GridColDef, GridRenderCellParams } from '@mui/x-data-grid';
 import Modal from '@mui/material/Modal';
@@ -15,7 +14,7 @@ import CloseIcon from '@mui/icons-material/Close';
 export default function Partnerprogram() {
 
     const theme = useTheme()
-    const token = 'https://en.flashobmen.com/ref/acc0c4c8-c799-4216-a281-6d3d3c43a480'
+    const token = 'Https://En.Flashobmen.Com/Ref/Acc0c4c8-C799-4216-A281-6d3d3c43a480'
     const [open, setOpen] = React.useState(false);
     const [modalOpen, setmodalOpen] = React.useState(false);
     const handleClick = () => {
@@ -108,10 +107,10 @@ export default function Partnerprogram() {
     ];
 
     const rows = [
-        { id: 1, amount: '100', to: 'x09aa998ee454c456255daf3ac94908f1dcfb7033', date: "25-02-2023", status: "Done" },
-        { id: 2, amount: '100', to: 'x09aa998ee454c456255daf3ac94908f1dcfb7033', date: "25-02-2023", status: "Waiting" },
-        { id: 3, amount: '100', to: 'x09aa998ee454c456255daf3ac94908f1dcfb7033', date: "25-02-2023", status: "Done" },
-        { id: 4, amount: '100', to: 'x09aa998ee454c456255daf3ac94908f1dcfb7033', date: "25-02-2023", status: "Done" },
+        { id: 1, amount: '100', to: 'X09aa998ee454c456255daf3ac94908f1dcfb7033', date: "25-02-2023", status: "Done" },
+        { id: 2, amount: '100', to: 'X09aa998ee454c456255daf3ac94908f1dcfb7033', date: "25-02-2023", status: "Waiting" },
+        { id: 3, amount: '100', to: 'X09aa998ee454c456255daf3ac94908f1dcfb7033', date: "25-02-2023", status: "Done" },
+        { id: 4, amount: '100', to: 'X09aa998ee454c456255daf3ac94908f1dcfb7033', date: "25-02-2023", status: "Done" },
     ];
 
     return (
@@ -119,7 +118,7 @@ export default function Partnerprogram() {
             <Typography component="p" fontSize="16px" fontWeight="bold" color={theme.palette.text.secondary}>Your Affiliate Link :</Typography>
             <Stack direction="row" justifyContent="space-between" alignItems="center" my="14px" borderRadius="10px" sx={{ backgroundColor: theme.palette.primary.main }}>
                 <Typography sx={{ paddingLeft: "26px" }}>{token}</Typography>
-                <Button onClick={handleClick} startIcon={<ContentCopyIcon />} sx={{ color: theme.palette.text.secondary, backgroundColor: "#353F50", boxShadow: "none", padding: "12px 21px" }}>copy</Button>
+                <Button onClick={handleClick} startIcon={<ContentCopyIcon />} sx={{ color: theme.palette.text.secondary, backgroundColor: "#353F50", boxShadow: "none", padding: "12px 21px" }}>Copy</Button>
                 <Snackbar
                     open={open}
                     autoHideDuration={2000}
@@ -128,21 +127,21 @@ export default function Partnerprogram() {
                 />
             </Stack>
             <Stack direction="row" alignItems="center" gap="23px">
-                <Stack direction="row" alignItems="center" gap="66px" justifyContent="space-between" sx={{ backgroundColor: theme.palette.primary.main, padding: "23px 26px", borderRadius: "10px" }}>
+                <Stack direction="row" alignItems="center" gap="64px" justifyContent="space-between" sx={{ backgroundColor: theme.palette.primary.main, padding: "23px 26px", borderRadius: "10px" }}>
                     <Stack direction="row" gap="16px">
                         <Stack justifyContent="center" alignItems="center" sx={{ backgroundColor: "#40A578", borderRadius: "100px", width: "67px", height: "67px", boxShadow: "0px 4px 10px 0px #40A57880" }}>
-                            <DiamondOutlinedIcon fontSize='large' />
+                            <img src="/dimonicons.svg" alt="dimonicon" />
                         </Stack>
                         <Stack justifyContent="space-between">
                             <Typography fontSize="18px" fontWeight="600">Your Wallet Balance</Typography>
                             <Typography color='#40A578' fontSize="24px" fontWeight="700">320 USDT</Typography>
                         </Stack>
                     </Stack>
-                    <Button onClick={handleOpenModal} sx={{ backgroundColor: "#40A578", boxShadow: "none", padding: "15px 32px" }}>withdraw</Button>
+                    <Button onClick={handleOpenModal} sx={{ backgroundColor: "#40A578", boxShadow: "none", padding: "15px 32px" }}>Withdraw</Button>
                 </Stack>
                 <Stack direction="row" gap="19px" sx={{ backgroundColor: theme.palette.primary.main, padding: "23px 26px", borderRadius: "10px" }}>
-                    <Stack justifyContent="center" alignItems="center" sx={{ backgroundColor: "#F05A7E", borderRadius: "100px", width: "67px", height: "67px" }}>
-                        <PeopleAltOutlinedIcon fontSize='large' />
+                    <Stack justifyContent="center" alignItems="center" sx={{ backgroundColor: "#F05A7E", borderRadius: "100px", width: "67px", height: "67px", boxShadow: "0px 4px 10px 0px #F05A7E80" }}>
+                        <img src="/usertogerericons.svg" alt="usericon" />
                     </Stack>
                     <Stack justifyContent="space-between">
                         <Typography fontSize="18px" fontWeight="600">Your Friends</Typography>
@@ -152,24 +151,24 @@ export default function Partnerprogram() {
                 <Modal open={modalOpen} onClose={handleCloseModal}>
                     <Box sx={{width:"744px" ,padding:"40px 59px", borderRadius:"20px" ,backgroundColor:theme.palette.secondary.main ,position:"absolute", top: '50%',left: '50%',transform: 'translate(-50%, -50%)',}}>
                         <Stack direction="row" alignItems="center" justifyContent="space-between" sx={{paddingBottom:"36px", borderBottom:"1px solid #364153"}}>
-                            <Typography component="span" fontSize="28px" fontWeight="600">withdraw</Typography>
+                            <Typography component="span" fontSize="28px" fontWeight="600">Withdraw</Typography>
                             <CloseIcon onClick={handleCloseModal} sx={{cursor:"pointer"}}/>
                         </Stack>
                         <Stack gap="26px" sx={{marginTop:"41px"}}>
                             <Typography component="p" fontSize="20px" color='#ABABAB' fontWeight="600">Your Wallet Address (Tether TRC20)</Typography>
                             <TextField fullWidth placeholder="Address" variant="outlined" sx={{ m: 0, "& .MuiOutlinedInput-root": { "& fieldset": { border: "none" }, "&:hover fieldset": { border: "none" } } }} />
-                            <Button>confirm</Button>
+                            <Button>Confirm</Button>
                         </Stack>
                     </Box>
                 </Modal>
             </Stack>
-            <Stack direction="row" sx={{ color: theme.palette.text.secondary, display: "flex", alignItems: "center", gap: "5px", marginTop: "11px", marginBottom: "44px", }}>
-                <Typography variant="subtitle1" color="secondry">
-                    get 10
+            <Stack direction="row" sx={{ color: theme.palette.text.secondary, display: "flex",alignItems: "center", gap: "5px", marginTop: "11px", marginBottom: "44px", }}>
+                <Typography variant="subtitle1" color="secondry" fontWeight="600">
+                    Get 10
                 </Typography>
                 <DiamondOutlinedIcon sx={{ color: "#40A578" }} />
-                <Typography variant="subtitle1" color="secondry">
-                    for each invited user
+                <Typography variant="subtitle1" color="secondry" fontWeight="600">
+                    For Each Invited User
                 </Typography>
             </Stack>
             <Typography component="p" fontSize="24px" fontWeight="bold" mb="22px">Your Impressions</Typography>

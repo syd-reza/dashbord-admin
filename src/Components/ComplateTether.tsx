@@ -19,9 +19,9 @@ export default function ComplateTether() {
     const [showeComplate, setshoweComplate] = useState(true)
 
     const items = [
-        "Any change in exchange rate on the binance exchange gives us the right to recalculate the amount of the application.",
-        "The rate for your application will be fixed after 1 confirmation online.",
-        "Funds are credited after 20 transaction confirmations.",
+        "Any Change In Exchange Rate On The Binance Exchange Gives Us The Right To Recalculate The Amount Of The Application.",
+        "The Rate For Your Application Will Be Fixed After 1 Confirmation Online.",
+        "Funds Are Credited After 20 Transaction Confirmations.",
     ];
 
     const successClick = () => {
@@ -71,7 +71,7 @@ export default function ComplateTether() {
                     )}
                     <Stack direction="row" gap="60px" justifyContent="space-between" mt="56px">
                         <Stack justifyContent="space-between">
-                            <Typography fontSize="20px" lineHeight="46px" color={theme.palette.text.secondary}>choose network and To receive 120 Perfect Money, please deposit 100 Tether to the Tether address below:</Typography>
+                            <Typography fontSize="20px" lineHeight="46px" color={theme.palette.text.secondary}>Choose Network And To Receive 120 Perfect Money, Please Deposit 100 Tether To The Tether Address Below:</Typography>
                             <Stack direction="row" sx={{ backgroundColor: "#242C39", borderRadius: "10px" }}>
                                 <Select value={value} onChange={(e) => setValue(e.target.value)} sx={{ backgroundColor: theme.palette.success.main, width: "20%", "& .MuiSelect-icon": { color: "#fff" } }}>
                                     <MenuItem value="TRON">
@@ -86,7 +86,7 @@ export default function ComplateTether() {
                         </Box>
                     </Stack>
                     <Box>
-                        <Typography fontSize="20px" mt="54px" mb="30px" fontWeight="700">Exchange conditions:</Typography>
+                        <Typography fontSize="20px" mt="54px" mb="30px" fontWeight="700">Exchange Conditions:</Typography>
                         <List sx={{ display: "flex", flexDirection: "column", gap: "14px", "& .MuiListItem-root": { py: 0.2, px: 0, } }}>
                             {items.map((text, index) => (
                                 <ListItem key={index} sx={{ display: "flex", alignItems: "flex-start", gap: "13px" }}>

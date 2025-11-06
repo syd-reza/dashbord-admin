@@ -1,12 +1,14 @@
-import { Container, Stack, Box, Link, useTheme } from '@mui/material';
+import { Container, Stack, Box, useTheme } from '@mui/material';
 import { useSelector } from 'react-redux';
 import { fixedAdmin } from '../redux/authSlice';
 import { useLocation } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 export default function Header() {
     const theme = useTheme();
     const isLogin = useSelector((state: any) => state.auth.isLogin);
     const location = useLocation();
+    const isActivve = (path: string) => location.pathname === path;
 
     const menuItems = [
         { label: "Home", path: "/" },
@@ -26,7 +28,12 @@ export default function Header() {
                         const isActive = location.pathname === item.path;
                         return (
                             <Box key={item.path} sx={{ position: "relative" }}>
-                                <Link href={item.path} color={theme.palette.text.primary} underline='none'>
+                                <Link to={item.path} style={{
+                                    fontWeight: isActivve(item.path) ? "bold" : "normal",
+                                    transition: "0.2s",
+                                    color: "#E4E4E4",
+                                    textDecoration: "none",
+                                }}>
                                     {item.label}
                                 </Link>
 
@@ -53,9 +60,9 @@ export default function Header() {
                     <Box component="img" src="/useroanel.svg" alt="logo"></Box>
 
                     {isLogin ? (
-                        <Link href="/dashbord" color={theme.palette.text.primary} underline='none'>{fixedAdmin.name}</Link>
+                        <Link to="/dashbord" style={{transition: "0.2s", color: "#E4E4E4", textDecoration: "none",}}>{fixedAdmin.name}</Link>
                     ) : (
-                        <Link href="/auth/login" color={theme.palette.text.primary} underline='none'>Login / Register</Link>
+                        <Link to="/auth/login" style={{transition: "0.2s", color: "#E4E4E4", textDecoration: "none",}}>Login / Register</Link>
                     )}
                 </Box>
             </Stack>

@@ -22,11 +22,11 @@ export default function Home() {
   const steps = [
     {
       title: "Exchange",
-      description: <Exchange onNext={handleNext}/>
+      description: <Exchange onNext={handleNext} />
     },
     {
       title: "Confirm",
-      description: <Confirm onNext={handleNext}/>
+      description: <Confirm onNext={handleNext} />
     },
     {
       title: "Complete",
@@ -40,14 +40,14 @@ export default function Home() {
         activeStep={activeStep}
         sx={{
           "& .MuiStepIcon-root.Mui-active": { color: "#40A578", boxShadow: "0px 4px 10px 0px #40A57880", borderRadius: "50%" },
-          "& .MuiStepLabel-label.Mui-active": { color: "#40A578", fontWeight:"700"},
+          "& .MuiStepLabel-label.Mui-active": { color: "#40A578", fontWeight: "700" },
           "& .MuiStepIcon-root.Mui-completed": { color: "#40A578" },
           "& .MuiStepLabel-labelContainer": { color: "#596B89" },
           "& .MuiStepIcon-root": { color: "#596B89" },
           "& .MuiStepLabel-label.Mui-completed": { color: "#40A578" },
-          "& .Mui-active .MuiStepConnector-line": {borderColor: "#40A578",},
-          "& .Mui-completed .MuiStepConnector-line": {borderColor: "#40A578",},
-          "& .MuiStepConnector-line": { width: "70%", margin: "0 auto", borderColor: "#596B89"},
+          "& .Mui-active .MuiStepConnector-line": { borderColor: "#40A578", },
+          "& .Mui-completed .MuiStepConnector-line": { borderColor: "#40A578", },
+          "& .MuiStepConnector-line": { width: "70%", margin: "0 auto", borderColor: "#596B89" },
           backgroundColor: theme.palette.secondary.main,
           padding: "36px 240px",
           mt: "90px",
@@ -57,12 +57,18 @@ export default function Home() {
       >
         {steps.map((step, index) => (
           <Step key={index}>
-            <StepLabel>{step.title}</StepLabel>
+            <StepLabel sx={{cursor:"pointer"}} onClick={() => {
+                  if (index < activeStep) {
+                    setActiveStep(index);
+                  }
+                }}>
+              {step.title}
+            </StepLabel>
           </Step>
         ))}
       </Stepper>
 
-      <Box sx={{ marginTop:"34px" }}>
+      <Box sx={{ marginTop: "34px" }}>
         {steps[activeStep].description}
       </Box>
 

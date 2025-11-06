@@ -6,7 +6,7 @@ export default function Waiting() {
     const theme = useTheme()
 
     const successFields = [
-        { id: 1, title: "Address:", value: "x09aa998ee454c456255daf3ac94908f1dcfb7033" },
+        { id: 1, title: "Address:", value: "X09aa998ee454c456255daf3ac94908f1dcfb7033" },
         { id: 2, title: "Amount :", value: "100 USDT" }
     ];
 
@@ -25,7 +25,7 @@ export default function Waiting() {
             </Stack>
             <Stack mt="28px" justifyContent="center" alignItems="center" gap="29px" >
                 <Stack direction="row" gap="16px" alignItems="center" justifyContent="center" color="#FFAF00">
-                    <HistoryToggleOffIcon sx={{ fontSize: "46px" }} />
+                    <img src="/waitingicons.svg"/>
                     <Typography component="h2" textAlign="center" fontSize="32px" fontWeight="600">Waiting ...</Typography>
                 </Stack>
                 <Typography fontSize="20px" color={theme.palette.text.secondary} fontWeight="700">Your Payment Was Successful And We Will Soon Pay The Amount Of 100 Tether To This Address :</Typography>

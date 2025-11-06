@@ -42,7 +42,7 @@ export default function Login() {
 
     return (
         <Container sx={{ display: 'flex', justifyContent: "center" }}>
-            <Box component="form" onSubmit={form.handleSubmit} mt="137px" py="34px" px="38px" sx={{ display: "flex", flexDirection: "column", width: "560px", height: "auto", backgroundColor: theme.palette.secondary.main, borderRadius: "30px" }}>
+            <Box component="form" onSubmit={form.handleSubmit} mt="137px" mb="50px" py="34px" px="38px" sx={{ display: "flex", flexDirection: "column", width: "560px", height: "auto", backgroundColor: theme.palette.secondary.main, borderRadius: "30px" }}>
                 <Typography fontSize="36px" fontWeight="bold" variant='h2' textAlign="center" sx={{ background: "linear-gradient(to right, #1D8D94 0%, #91D2A3 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", }}>Login</Typography>
                 <FormLabel>Email :</FormLabel>
                 <TextField name='email' value={form.values.email} onChange={form.handleChange} onBlur={form.handleBlur} type='email' placeholder='Please Enter Your Email' error={form.touched.email && Boolean(form.errors.email)} helperText={form.touched.email && form.errors.email}
@@ -77,9 +77,9 @@ export default function Login() {
                 <Stack direction="row" mb="19px" justifyContent="space-between" alignItems="center">
                     <FormControlLabel
                         control={<Checkbox color="success" />}
-                        label="Keep me login" sx={{ color: theme.palette.text.secondary }}
+                        label="Keep Me Login" sx={{ color: theme.palette.text.secondary }}
                     />
-                    <Link href="/auth/forgetpass" sx={{ color: theme.palette.success.main }}>Forgot your password?</Link>
+                    <Link href="/auth/forgetpass" sx={{ color: theme.palette.success.main }}>Forgot Your Password?</Link>
                 </Stack>
                 <Button type='submit'>login</Button>
                 <Typography mt="27px" fontWeight="bold" color={theme.palette.text.secondary} component='p' align='center'>Dont Have An Account?

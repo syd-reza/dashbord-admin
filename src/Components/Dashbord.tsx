@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { useTheme, Pagination, TextField, Typography, Box, Button } from '@mui/material';
-import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import { DataGrid } from '@mui/x-data-grid';
 import type { GridColDef, GridRenderCellParams } from '@mui/x-data-grid';
 
@@ -12,7 +11,7 @@ export default function Dashbord() {
     const columns: GridColDef[] = [
         {
             field: 'from',
-            headerName: 'from',
+            headerName: 'From',
             headerClassName: 'super-app-theme--header',
             width: 130,
             flex: 1,
@@ -40,7 +39,7 @@ export default function Dashbord() {
         },
         {
             field: 'to',
-            headerName: 'to',
+            headerName: 'To',
             headerClassName: 'super-app-theme--header',
             width: 120,
             flex: 1,
@@ -68,7 +67,7 @@ export default function Dashbord() {
         },
         {
             field: 'amount',
-            headerName: 'amount',
+            headerName: 'Amount',
             headerClassName: 'super-app-theme--header',
             width: 105,
             flex: 1,
@@ -76,7 +75,7 @@ export default function Dashbord() {
         },
         {
             field: 'received',
-            headerName: 'received',
+            headerName: 'Received',
             headerClassName: 'super-app-theme--header',
             width: 100,
             flex: 1,
@@ -84,7 +83,7 @@ export default function Dashbord() {
         },
         {
             field: 'date',
-            headerName: 'date',
+            headerName: 'Date',
             headerClassName: 'super-app-theme--header',
             width: 120,
             flex: 1,
@@ -92,7 +91,7 @@ export default function Dashbord() {
         },
         {
             field: 'status',
-            headerName: 'status',
+            headerName: 'Status',
             headerClassName: 'super-app-theme--header',
             width: 120,
             flex: 1,
@@ -106,7 +105,7 @@ export default function Dashbord() {
                 if (value === 'successful') {
                     color = '#40A578';
                     text = 'Successful';
-                } else if (value === 'unsuccessful') {
+                } else if (value === 'Unsuccessful') {
                     color = '#F66066';
                     text = 'unsuccessful';
                 } else if (value === 'checking') {
@@ -123,7 +122,7 @@ export default function Dashbord() {
         },
         {
             field: 'link',
-            headerName: 'link',
+            headerName: 'Link',
             headerClassName: 'super-app-theme--header',
             width: 100,
             flex: 1,
@@ -132,16 +131,16 @@ export default function Dashbord() {
     ];
 
     const rows = [
-        { id: 1, from: 'USDT', to: 'PM', amount: 1000, received: 1200, date: "25-02-2023", status: "successful", link: "see more" },
-        { id: 2, from: 'USDT', to: 'PM', amount: 1000, received: 1200, date: "25-02-2023", status: "unsuccessful", link: "see more" },
-        { id: 3, from: 'USDT', to: 'PM', amount: 1000, received: 1200, date: "25-02-2023", status: "checking", link: "see more" },
-        { id: 4, from: 'USDT', to: 'PM', amount: 1000, received: 1200, date: "25-02-2023", status: "successful", link: "see more" },
-        { id: 5, from: 'USDT', to: 'PM', amount: 1000, received: 1200, date: "25-02-2023", status: "successful", link: "see more" },
-        { id: 6, from: 'USDT', to: 'PM', amount: 1000, received: 1200, date: "25-02-2023", status: "successful", link: "see more" },
-        { id: 7, from: 'USDT', to: 'PM', amount: 1000, received: 1200, date: "25-02-2023", status: "successful", link: "see more" },
-        { id: 8, from: 'USDT', to: 'PM', amount: 1000, received: 1200, date: "25-02-2023", status: "successful", link: "see more" },
-        { id: 9, from: 'USDT', to: 'PM', amount: 1000, received: 1200, date: "25-02-2023", status: "successful", link: "see more" },
-        { id: 10, from: 'USDT', to: 'PM', amount: 1000, received: 1200, date: "25-02-2023", status: "successful", link: "see more" },
+        { id: 1, from: 'USDT', to: 'PM', amount: 1000, received: 1200, date: "25-02-2023", status: "successful", link: "See More" },
+        { id: 2, from: 'USDT', to: 'PM', amount: 1000, received: 1200, date: "25-02-2023", status: "Unsuccessful", link: "See More" },
+        { id: 3, from: 'USDT', to: 'PM', amount: 1000, received: 1200, date: "25-02-2023", status: "checking", link: "See More" },
+        { id: 4, from: 'USDT', to: 'PM', amount: 1000, received: 1200, date: "25-02-2023", status: "successful", link: "See More" },
+        { id: 5, from: 'USDT', to: 'PM', amount: 1000, received: 1200, date: "25-02-2023", status: "successful", link: "See More" },
+        { id: 6, from: 'USDT', to: 'PM', amount: 1000, received: 1200, date: "25-02-2023", status: "successful", link: "See More" },
+        { id: 7, from: 'USDT', to: 'PM', amount: 1000, received: 1200, date: "25-02-2023", status: "successful", link: "See More" },
+        { id: 8, from: 'USDT', to: 'PM', amount: 1000, received: 1200, date: "25-02-2023", status: "successful", link: "See More" },
+        { id: 9, from: 'USDT', to: 'PM', amount: 1000, received: 1200, date: "25-02-2023", status: "successful", link: "See More" },
+        { id: 10, from: 'USDT', to: 'PM', amount: 1000, received: 1200, date: "25-02-2023", status: "successful", link: "See More" },
     ];
 
     const handleChange = (_: React.ChangeEvent<unknown>, value: number) => {
@@ -151,11 +150,11 @@ export default function Dashbord() {
     return (
         <Box sx={{ backgroundColor: theme.palette.secondary.main }} borderRadius="20px" py="20px" px="22px">
             <Box display="flex" alignItems="center" px="20px" borderRadius={theme.shape.borderRadius} sx={{ backgroundColor: theme.palette.primary.main }}>
-                <SearchOutlinedIcon />
+                <img src="/searchicons.svg" alt="searchicon" />
                 <TextField fullWidth placeholder="Search..." variant="outlined" sx={{ m: 0, "& .MuiOutlinedInput-root": { "& fieldset": { border: "none" }, "&:hover fieldset": { border: "none" } } }} />
             </Box>
             <Box mt="41px" mb="22px">
-                <Typography variant='h3' fontSize="24px">Latest transactions</Typography>
+                <Typography variant='h3' fontSize="24px">Latest Transactions</Typography>
             </Box>
             <Box sx={{ width: '100%' }}>
                 <DataGrid

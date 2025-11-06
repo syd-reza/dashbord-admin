@@ -33,7 +33,7 @@ export default function ContactUs() {
                 <TextField name='email' sx={{border:"none" ,"&:hover fieldset": { border: "none" }}} value={form.values.email} onChange={form.handleChange} onBlur={form.handleBlur} type='email' placeholder='Please Enter Your Email' error={form.touched.email && Boolean(form.errors.email)} helperText={form.touched.email && form.errors.email} />
                 <FormLabel>Subject :</FormLabel>
                 <TextField name='subject' sx={{border:"none" ,"&:hover fieldset": { border: "none" }}} value={form.values.subject} onChange={form.handleChange} onBlur={form.handleBlur} placeholder='Please Enter Your Subject' error={form.touched.subject && Boolean(form.errors.subject)} helperText={form.touched.subject && form.errors.subject} />
-                <FormLabel>Message text :</FormLabel>
+                <FormLabel>Message Text :</FormLabel>
                 <TextareaAutosize
                     value={form.values.message} onChange={form.handleChange} 
                     name='message'
@@ -41,7 +41,7 @@ export default function ContactUs() {
                     placeholder="Please Enter Your Massege"
                     className="custom-textarea"
                 />
-                <Button type='submit'>send</Button>
+                <Button type='submit'>Send</Button>
             </Box>
         </Container>
     )
